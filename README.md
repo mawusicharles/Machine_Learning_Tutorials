@@ -1,5 +1,6 @@
 # Machine_Learning_Tutorials
-Machine Learning 
+Machine Learning Tutorials
+Projects to train in ML technologies
 
 
 
