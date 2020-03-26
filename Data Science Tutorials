@@ -1,4 +1,9 @@
+import pandas as pd
+import  numpy as np
+import matplotlib.pyplot as plt
 # Class objects and methods
+
+
 class Students:
 
     def __init__(self, email, name, age):
@@ -16,3 +21,38 @@ student2 = Students("yahooo@yahoo.com", "Jeniffer ", 25)
 print(student1.details())
 print(student2.details())
 
+# How to open file method1
+with open("airmiles.csv", "r") as file:
+    data = file.read()
+    print(data)
+print("**********************************************************************************")
+# How to open file method2
+
+file = open("airmiles.csv", "r")
+date = file.read()
+print(data)
+file.close()
+# How to open file method3 using pandas first  import pandas as pd
+print("**********************************************************************************")
+print("Pandas approach ")
+
+print("**********************************************************************************")
+
+data1 = pd.read_csv("airmiles.csv")
+print(data1.head(10))
+# using loc and iloc to subset data
+print(data1.loc[1:5, "time"])
+print(data1.iloc[1:5, 2])
+
+# numpy application
+line = np.linspace(2, 10, 100)
+print(line)
+print("mean is : ", np.mean(line))
+plt.plot(line)
+plt.show()
+
+a = [[1,1,4], [5,4,5], [4,7,5]]
+
+A= np.array(a)
+print(A)
+print(np.shape(A))
