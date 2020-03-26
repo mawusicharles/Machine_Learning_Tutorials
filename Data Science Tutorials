@@ -1,0 +1,18 @@
+# Class objects and methods
+class Students:
+
+    def __init__(self, email, name, age):
+        self.email = email
+        self.name = name
+        self.age = age
+
+    def details(self):
+        print("my name is {} and i am {} years of age and my email is {}".format(self.name, self.age, self.email))
+
+
+student1 = Students("fame@yahoo.com", "Charles", 40)
+student2 = Students("yahooo@yahoo.com", "Jeniffer ", 25)
+
+print(student1.details())
+print(student2.details())
+
