@@ -53,6 +53,32 @@ plt.show()
 
 a = [[1,1,4], [5,4,5], [4,7,5]]
 
-A= np.array(a)
+A = np.array(a)
 print(A)
 print(np.shape(A))
+
+print("************************************************************************")
+print(" ApI and Rest API ")
+print("************************************************************************")
+# my api keys 8206d11eda26863a66feba6cd7751c10
+# url: https://samples.openweathermap.org/data/2.5/weather?id=2172797&appid=b6907d289e10d714a6e88b30761fae22
+
+import requests
+import pprint
+
+web = requests.get("https://samples.openweathermap.org/data/2.5/weather?id=2172797&appid=b6907d289e10d714a6e88b30761fae22")
+data = web.json()
+print(pprint.pprint(data))
+for x in data["weather"]:
+    print(pprint.pprint(x))
+    print(pprint.pprint(x["description"], x["icon "]))
+
+print(" Introduction to web Scrapping ")
+
+web = requests.get("https://www.winemag.com/wine-ratings/")
+print(pprint.pprint(web.text))
+import bs4
+
+soup = bs4.BeautifulSoup(web.text, "html")
+print(type(soup))
+data = soup.select("")
